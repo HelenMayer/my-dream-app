@@ -1,0 +1,11 @@
+.app-server{
+    background-color: blue;
+}
+
+.app-server * {
+    color: #FFE4C4;
+}
+
+.online{
+    border: 5px bisque double;
+}

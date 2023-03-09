@@ -1,0 +1,53 @@
+    <section class="app-servers">
+        <h1>I'm in the server component</h1>
+        <p>Below this I have 1 server component</p>
+
+        <hr>
+
+        <p><label>Server name is {{serverName}}</label></p>
+        
+        <input  
+        type="text" 
+        class="form-control" 
+        (input)="onUpdateServerName($event)" 
+        style="color: black;">
+        <br>
+
+        <input  
+        type="text" 
+        class="form-control" 
+        [(ngModel)] = "serverName" 
+        style="color: black;">
+        <br>
+        <!-- <p>{{serverName}}</p> -->
+        
+        <button 
+        [disabled] = "!allowNewServer" 
+        (click)="onCreateserver()" 
+        class="btn btn-primary">Add server</button>
+        <p>Server Creation Status: {{serverCreationStatus}}</p>
+        <p>Allow New Server: {{allowNewServer}}</p> 
+        <hr>
+<!-- 
+
+        <p>{{serverCreationStatus}}</p>
+        <p>{{allowNewServer}}</p> -->
+        <input  
+        type="text" 
+        class="form-control" 
+        [(ngModel)] = "serverName" 
+        style="color: black;">
+        <br>
+        <!-- <p>{{serverName}}</p> -->
+        
+        <button 
+        [disabled] = "!allowNewServer" 
+        (click)="onCreateserver()" 
+        class="btn btn-primary">Add server</button>
+        <p *ngIf="serverCreated; else noServer" class="sisennys">{{serverCreationStatus}}</p>
+        <ng-template #noServer>
+            <p>No Server created!</p>
+        </ng-template>
+        <app-server *ngFor="let server of servers"></app-server>
+
+    </section>

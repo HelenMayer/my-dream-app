@@ -1,0 +1,16 @@
+.app-servers{
+    background-color: black;
+}
+
+.app-servers * {
+    color: #FFE4C4;
+}
+
+.btn{
+    color: #FFE4C4;
+    background-color: #0069D9;
+}
+
+p{
+    margin: 1rem;
+}
